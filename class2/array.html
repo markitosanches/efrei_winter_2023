@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+    <button type="button" onclick="myBox(0)"> Click</button>
+    
+</body>
+<script>
+
+function myBox(){
+    document.getElementById("box").style.display= "none"
+} 
+
+    let a = ["a", "b", "c", "d"]
+    //a.reverse();
+    //a.pop()
+    //a.shift()
+    //a.push("e")
+    b = a.slice(1, 2)
+    //console.log(a);
+    console.log(b);
+
+    c = a.length
+
+    console.log(c)
+
+    let numbers = [1, 4, 10, 43]
+
+    let sum = numbers.reduce(myFunction)
+    
+    function myFunction(total, value, index){
+        return total + value
+    }
+
+    console.log(sum)
+
+</script>
+</html>

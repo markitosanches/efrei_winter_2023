@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <style>
+        body{
+            background-color: bisque;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+        }
+        header, footer{
+            background-color: brown;
+            text-align: center;
+            padding: 1em;
+            color: bisque;
+        }
+        nav{
+            background-color: burlywood;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav  a{
+            color: brown;
+            text-decoration: none;
+            padding: 1em;
+        }
+
+        nav a:hover{
+            color: burlywood;
+            background-color: brown;
+        }
+        main{
+            display: flex;
+        }
+        section{
+            flex: 1;
+        }
+        @media screen and (max-width:600px) {
+            nav{
+                flex-flow: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Exercise 1</header>
+    <nav>
+            <a href="#">Page 1</a>
+            <a href="#">Page 2</a>
+            <a href="#">Page 3</a>
+    </nav>
+    <main>
+
+        <section>
+            <article>
+                abc
+            </article>
+            <h2>About Me</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ipsa, culpa minima enim quisquam odio repellendus fugit vel debitis repellat vitae dolorem, eveniet atque totam deleniti expedita natus hic similique.</p>
+        </section>
+        <section>
+            <h2>Interests</h2>
+            <ul>
+                <li>Lorem 1</li>
+                <li>Lorem 2</li>
+                <li>Lorem 3</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <h3>Efrei</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi placeat rerum quae tempora unde nam recusandae molestias dicta incidunt ipsum obcaecati reprehenderit dolorem similique, in consequatur sint voluptatibus, aperiam non.</p>
+            <h3>Concordia</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorem, fugiat quia esse adipisci rerum voluptatem explicabo et inventore nostrum quasi iste debitis voluptas est ea quibusdam rem, reiciendis similique?</p>
+        </section>
+    </main>
+    <footer>
+        Copyrights 2023
+    </footer>
+</body>
+</html>

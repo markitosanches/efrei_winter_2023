@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+        .box2{
+            background-color: red;
+        }
+        .box3{
+            background-color: green;
+        }
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" v-cloak>
+            {{ greeting }}
+            <br>
+            <div class="box" v-if="isVisible"></div>
+            <div class="box box2" v-else-if="isVisible2"></div>
+            <div class="box box3" v-else></div>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        let app = Vue.createApp({
+            data: function(){
+                return{
+                    greeting: 'Hello folks',
+                    isVisible: false,
+                    isVisible2: false
+                }  
+            }
+        })
+        app.mount('#app')
+    </script>
+</body>
+</html>

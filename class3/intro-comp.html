@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <login-form/>
+
+    </div>
+    <!--<form action="">
+        <label>Username
+            <input type="text" name="username" >
+        </label>
+        <label>Password
+            <input type="password" name="password" >
+        </label>
+    </form>-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        let app = Vue.createApp({
+
+        })
+
+        app.component('login-form',{
+            template:`
+            <h1>{{ title }}</h1>
+            <form @submit.prevent="handleSubmit">
+                <label>Username
+                    <input type="text" name="username" v-model="username" >
+                </label>
+                <label>Password
+                    <input type="password" name="password" v-model="password">
+                </label>
+                <button>Login</login>
+            </form>
+            `,
+            data(){
+                return{
+                    'title': "Login",
+                    'username': "",
+                    'password': ''
+                    }
+            },
+            methods: {
+                handleSubmit() {
+                    console.log(this.username, this.password)
+                }
+            }
+        })
+        
+        app.mount('#app')
+    </script>
+</body>
+</html>

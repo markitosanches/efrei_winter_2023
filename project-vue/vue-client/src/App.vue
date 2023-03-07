@@ -20,10 +20,10 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
+                    <button class="btn btn-outline-dark" type="button" v-on:click="toggleSideBar">
                         <i class="bi-cart-fill me-1"></i>
                         Cart
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        <span class="badge bg-dark text-white ms-1 rounded-pill"> {{ totalQuantity }}</span>
                     </button>
                 </form>
             </div>
@@ -38,21 +38,51 @@
             </div>
         </div>
     </header>
-  <router-view/>
+  <router-view
+  :inventory = "inventory"
+  :addToCart = "addToCart"
+  />
   <Sidebar
   v-if="showSideBar"
+  :toggle = "toggleSideBar"
+  :cart = "cart"
+  :inventory = "inventory"
+  :remove = "removeItem"
   />
 </template>
 
 <script>
 import Sidebar from './components/SideBar.vue'
+import product from '@/product.json'
 export default {
   components: {
     Sidebar
   },
   data () {
     return {
-      showSideBar: false
+      showSideBar: false,
+      inventory: product,
+      cart: {}
+    }
+  },
+  methods: {
+    toggleSideBar () {
+      this.showSideBar = !this.showSideBar
+    },
+    addToCart (product, index) {
+      if (!this.cart[product]) this.cart[product] = 0
+      this.cart[product] += this.inventory[index].quantity
+      console.log(this.cart[product])
+    },
+    removeItem (name) {
+      delete this.cart[name]
+    }
+  },
+  computed: {
+    totalQuantity () {
+      return Object.values(this.cart).reduce((acc, curr) => {
+        return acc + curr
+      }, 0)
     }
   }
 }

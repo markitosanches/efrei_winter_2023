@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Head Set",
+        "photo": "phone.jpg",
+        "price":  15.00,
+        "type": "Electronic"
+    },
+    {
+        "id": 2,
+        "name": "XBOX",
+        "photo": "game.jpg",
+        "price": 10.44,
+        "type": "Game"
+    },
+    {
+        "id": 3,
+        "name": "Ipod",
+        "photo": "phone.jpg",
+        "price": 11.00,
+        "type": "Electronic"
+    },
+    {
+        "id": 4,
+        "name": "Nitendo",
+        "photo": "game.jpg",
+        "price": 5.49,
+        "type": "Game"
+    }
+]

@@ -1,30 +1,142 @@
 [
     {
         "id": 1,
-        "name": "Head Set",
-        "photo": "phone.jpg",
-        "price":  15.00,
-        "type": "Electronic"
+        "name": "AlooChat",
+        "photo": "aloochat.jpg",
+        "price":  5.00,
+        "type": "Food"
     },
     {
         "id": 2,
-        "name": "XBOX",
-        "photo": "game.jpg",
-        "price": 10.44,
-        "type": "Game"
+        "name": "AlooTiki",
+        "photo": "alootiki.jpg",
+        "price":  6.00,
+        "type": "Food"
     },
     {
         "id": 3,
-        "name": "Ipod",
-        "photo": "phone.jpg",
-        "price": 11.00,
-        "type": "Electronic"
+        "name": "Bhel",
+        "photo": "bhel.jpg",
+        "price":  7.00,
+        "type": "Food"
     },
     {
         "id": 4,
-        "name": "Nitendo",
-        "photo": "game.jpg",
-        "price": 5.49,
-        "type": "Game"
+        "name": "Burger",
+        "photo": "burger.jpg",
+        "price":  8.00,
+        "type": "Food"
+    },
+    {
+        "id": 5,
+        "name": "ChholeBhature",
+        "photo": "cholebhture.jpg",
+        "price":  5.50,
+        "type": "Food"
+    },
+    {
+        "id": 6,
+        "name": "Dabeli",
+        "photo": "dabeli.jpg",
+        "price":  5.90,
+        "type": "Food"
+    },
+    {
+        "id": 7,
+        "name": "DahiPuri",
+        "photo": "dahipuri.jpg",
+        "price":  8.00,
+        "type": "Food"
+    },
+    {
+        "id": 8,
+        "name": "DahiVada",
+        "photo": "dahivada.jpg",
+        "price":  8.70,
+        "type": "Food"
+    },
+    {
+        "id": 9,
+        "name": "FrenchFries",
+        "photo": "fries.jpg",
+        "price":  7.00,
+        "type": "Food"
+    },
+    {
+        "id": 10,
+        "name": "Ghughra",
+        "photo": "ghughra.jpg",
+        "price":  6.00,
+        "type": "Food"
+    },
+    {
+        "id": 11,
+        "name": "Manchurian",
+        "photo": "gobhimanchurian.jpg",
+        "price":  10.00,
+        "type": "Food"
+    },
+    {
+        "id": 12,
+        "name": "Kachori",
+        "photo": "kachori.jpg",
+        "price":  12.00,
+        "type": "Food"
+    },
+    {
+        "id": 13,
+        "name": "Maggi",
+        "photo": "maggi.jpg",
+        "price":  13.00,
+        "type": "Food"
+    },
+    {
+        "id": 14,
+        "name": "MangoLassi",
+        "photo": "mangolassi.jpg",
+        "price":  3.00,
+        "type": "Food"
+    },
+    {
+        "id": 15,
+        "name": "PaniPuri",
+        "photo": "panipuri.jpg",
+        "price":  14.00,
+        "type": "Food"
+    },
+    {
+        "id": 16,
+        "name": "Poha",
+        "photo": "paua.jpg",
+        "price":  5.70,
+        "type": "Food"
+    },
+    {
+        "id": 17,
+        "name": "Pizza",
+        "photo": "pizza.jpg",
+        "price":  9.00,
+        "type": "Food"
+    },
+    {
+        "id": 18,
+        "name": "Samosa",
+        "photo": "samosa.jpg",
+        "price":  7.00,
+        "type": "Food"
+    },
+    {
+        "id": 19,
+        "name": "SamosaChat",
+        "photo": "samosachat.jpg",
+        "price":  9.00,
+        "type": "Food"
+    },
+    {
+        "id": 20,
+        "name": "SandWich",
+        "photo": "sandwich.jpg",
+        "price":  8.00,
+        "type": "Food"
     }
 ]

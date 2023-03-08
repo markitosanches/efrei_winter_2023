@@ -20,6 +20,7 @@
                           <div class="text-center">
                               <input type="number" class="form-control qt" v-model.number="product.quantity">
                               <a class="btn btn-outline-dark mt-auto" @click="addToCart(product.name, i)">Add to cart</a>
+                             <p><router-link :to="'product/'+product.name">See more</router-link></p>
                           </div>
                       </div>
                   </div>

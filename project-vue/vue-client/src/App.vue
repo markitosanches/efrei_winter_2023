@@ -9,15 +9,6 @@
                     <li class="nav-item"><router-link class="nav-link active" aria-current="page" to="/">Home</router-link></li>
                     <li class="nav-item"><router-link class="nav-link" to="/about">About</router-link></li>
                     <li class="nav-item"><router-link class="nav-link" to="/new-product">New Product</router-link></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">All Products</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                        </ul>
-                    </li>
                 </ul>
                 <form class="d-flex">
                     <button class="btn btn-outline-dark" type="button" v-on:click="toggleSideBar">
@@ -41,6 +32,7 @@
   <router-view
   :inventory = "inventory"
   :addToCart = "addToCart"
+  :addInv = "addInventory"
   />
   <Sidebar
   v-if="showSideBar"
@@ -76,6 +68,9 @@ export default {
     },
     removeItem (name) {
       delete this.cart[name]
+    },
+    addInventory (data) {
+      this.inventory.push(data)
     }
   },
   computed: {

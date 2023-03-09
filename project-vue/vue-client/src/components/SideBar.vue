@@ -22,7 +22,7 @@
                 </thead>
                 <tbody>
                 <tr v-for="(quantity, key, i) in cart" :key="i">
-                    <td><img :src="('./img/100/'+getPhoto(key))" :alt="key" ></td>
+                    <td><img :src="`${publicPath}/img/100/${getPhoto(key)}`" :alt="key" ></td>
                     <td>{{ key }}</td>
                     <td>${{ getPrice(key) }}</td>
                     <td class="center">{{ quantity }}</td>
@@ -48,6 +48,11 @@
 <script>
 export default {
   props: ['toggle', 'cart', 'inventory', 'remove'],
+  data () {
+    return {
+      publicPath: window.location.origin
+    }
+  },
   methods: {
     getPrice (name) {
       const product = this.inventory.find((p) => {

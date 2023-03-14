@@ -1,5 +1,5 @@
 <template>
-    <div class="product-add">
+    <div v-if="user" class="product-add">
       <!-- Section-->
       <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
@@ -111,11 +111,15 @@
         </div>
       </section>
     </div>
+    <div v-else>
+      {{ this.$router.push({name: 'login'})}}
+    </div>
   </template>
 
 <script>
+import ProductDataService from '@/services/ProductDataService'
 export default {
-  props: ['addInv'],
+  props: ['addInv', 'user'],
   data () {
     return {
       submitted: false,
@@ -130,9 +134,13 @@ export default {
   },
   methods: {
     saveProduct () {
-      this.addInv(this.product)
-      console.log(this.product)
-      this.submitted = true
+      ProductDataService.create(this.product)
+        .then(response => {
+          this.product.id = response.data.id
+          this.addInv(this.product)
+          // console.log(this.product)
+          this.submitted = true
+        })
     },
     newProduct () {
       this.submitted = false

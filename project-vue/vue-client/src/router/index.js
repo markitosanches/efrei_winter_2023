@@ -3,7 +3,9 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import NewProductView from '../views/NewProductView.vue'
 import ProductView from '@/views/ProductView.vue'
-import ProductEdit from '@/views/ProductEditView.vue'
+import ProductEditView from '@/views/ProductEditView.vue'
+import UserView from '@/views/UserView.vue'
+import LoginView from '@/views/LoginView.vue'
 
 const routes = [
   {
@@ -23,7 +25,10 @@ const routes = [
   {
     path: '/new-product',
     name: 'new-product',
-    component: NewProductView
+    component: NewProductView,
+    meta: {
+      isAuth: true
+    }
   },
   {
     path: '/product/:id',
@@ -33,7 +38,17 @@ const routes = [
   {
     path: '/product-edit/:id',
     name: 'product-edit',
-    component: ProductEdit
+    component: ProductEditView
+  },
+  {
+    path: '/user',
+    name: 'user',
+    component: UserView
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView
   }
 ]
 
